@@ -1,0 +1,25 @@
+{% extends 'musicbeats/basic.html' %}
+{% block title %}All Songs{% endblock %}
+
+{% block body %}
+<div class="container">
+{% for i in songs reversed %}
+
+<div class="card mb-3" style="max-width: 540px; padding-top:2%">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/media/{{i.image}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title" style="color:rgb(6, 7, 7); font-weight: 500;">{{i.name}}</h5>
+          <p class="card-text">{{i.tags}}</p>
+          <a href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger">Listen songs</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

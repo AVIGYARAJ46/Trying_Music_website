@@ -1,0 +1,36 @@
+{% extends 'musicbeats/basic.html' %}
+{% block title %}SignUp{% endblock %}
+
+{% block body %}
+    <div class="container my-4">
+        <form>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="username">
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="firstname">
+                </div>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="lastname">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" name="password1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" name="password2">
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+{% endblock %}
